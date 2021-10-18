@@ -12,27 +12,26 @@
 5. Emboss: used for detecting edges.
 	
 ## Usage
-COMPILE: make build
-USAGE: mpirun -n no_processes ./tema3 image_in image_out filter1 
-		filter2 ... filterN
-CLEANING: make clean
+* COMPILE: make build
+* USAGE: mpirun -n no_processes ./tema3 image_in image_out filter1 filter2 ... filterN
+* CLEANING: make clean
 
 ## Performance study
 Scalability for the distributed algorithm:
 - PGM pictures:
-	Picture: rorschach.pgm (3853 x 2000)
-	Filters: bssembssem (blur smooth sharpen emboss mean blur smooth sharpen emboss mean)
-	Average time: (arithmetic median of values from 10 runs)
-		- 1 process:		13.6 seconds
-		- 2 processes:		14.8 seconds
-		- 3 processes:		10.7 seconds
-		- 4 processes:		8.6 seconds
+	* Picture: rorschach.pgm (3853 x 2000)
+	* Filters: bssembssem (blur smooth sharpen emboss mean blur smooth sharpen emboss mean)
+	* Average time: (arithmetic median of values from 10 runs)
+		* 1 process:		13.6 seconds
+		* 2 processes:		14.8 seconds
+		* 3 processes:		10.7 seconds
+		* 4 processes:		8.6 seconds
 
 - PNM pictures:
-	Picture: landcape.pnm (3840 x 2160)
-	Filters: bssembssem (blur smooth sharpen emboss mean blur smooth sharpen emboss mean)
-	Average time: (arithmetic median of values from 10 runs)
-		- 1 process:		43.8 seconds
-		- 2 processes:		46.4 seconds
-		- 3 processes:		34.8 seconds
-		- 4 processes:		26.5 seconds
+	* Picture: landcape.pnm (3840 x 2160)
+	* Filters: bssembssem (blur smooth sharpen emboss mean blur smooth sharpen emboss mean)
+	* Average time: (arithmetic median of values from 10 runs)
+		* 1 process:		43.8 seconds
+		* 2 processes:		46.4 seconds
+		* 3 processes:		34.8 seconds
+		* 4 processes:		26.5 seconds
